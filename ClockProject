@@ -46,7 +46,7 @@ function draw() {
 	
 	
 //obtained alien design from Geoffry (Alien) by jessy valentine 
-	//with altered colors and additional limbs
+	//with altered colors
 	
 	////legs
 fill("#e5c100"); 
