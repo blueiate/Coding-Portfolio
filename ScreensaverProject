@@ -1,0 +1,25 @@
+let sun;
+let clouds;
+let tree;
+let birds;
+
+function preload(){
+	sun = loadImage("sun.gif");
+	clouds = loadImage("clouds.gif");
+	tree = loadImage("tree.gif");
+	birds = loadImage("birds.gif");
+}
+
+function setup() {
+	createCanvas(windowWidth,windowHeight);
+}
+
+function draw(){
+		background('#87CEEB');
+	  image(clouds,0, 0,width, height/2); 
+		image(sun,width/16,height/16,250,250); 
+		image(birds,width/2,height/2,400,400);
+	  
+		
+		
+}
