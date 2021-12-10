@@ -1,0 +1,87 @@
+
+let earth;
+let mars;
+let ufo 
+
+function preload(){
+earth = loadImage("earth.png");
+ufo = loadImage("UFO.png");
+mars = loadImage("mars.png");
+}
+function setup() {
+  createCanvas(800, 800);
+}
+
+function draw() {
+  background('#1D2951');
+	imageMode(CENTER);
+  rectMode(CENTER);
+  angleMode(DEGREES);
+
+	image(earth,width/2,height/2,250,250); 
+  
+   translate(width/2,height/2);
+	
+	push();
+   let hourPlanet = map(hour() % 12, 0, 12, 0, 360);
+   rotate(hourPlanet);
+	 noStroke();
+	 image(mars, 120,-120, 180,140);
+   pop();
+	
+  push();
+	
+	let minUFO = map(minute(),0,59,0,359);
+	rotate(minUFO);
+	arc(0, 0, 280, 280, 0, 0);
+	noStroke();
+	image(ufo,120,-120,200,200);
+	pop();
+	
+	
+  push();
+	
+  let secAlien = map(second(),0,60,0,360);
+  rotate(secAlien);
+	
+	
+//obtained alien design from Geoffry (Alien) by jessy valentine 
+	//with altered colors and additional limbs
+	
+	////legs
+fill("#e5c100"); 
+stroke("#e5c100");
+rect(200,-160,35,50); //Right
+rect(140,-160,35,50);//Left
+	
+	
+////body 
+fill("#ffe34c");
+stroke("#ffe34c");
+circle(170, -190, 95);
+	
+////mouth
+fill(186, 73, 116);
+stroke(186, 73, 116);
+circle(170,-170,38);
+
+	
+////eye
+fill(225);
+stroke(225);
+circle(170, -200,45);
+
+////pupil
+        fill(0);
+        stroke(0);
+        circle(170,-200,25);
+////skin
+fill("#ffe34c");
+stroke("#ffe34c");
+rect(170,-190,80,12);
+//block that seperates the eyes and mouth
+
+  pop();
+  
+
+}
