@@ -82,6 +82,6 @@ rect(170,-190,80,12);
 //block that seperates the eyes and mouth
 
   pop();
-  
+ 
 
 }
